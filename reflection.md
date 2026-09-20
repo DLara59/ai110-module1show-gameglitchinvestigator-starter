@@ -48,17 +48,23 @@ One specific test that I ran was after the AI had fixed the hints not being accu
   
 - Did AI help you design or understand any tests? How?
 Yes, AI did help me both design and understand the tests being run. This was achieved by how detailed the explanations were. I found myself unafraid to ask more questions and for more explanations, and I found myself doubting the AI more and more, but in a positive way; I found myself understanding how its testing was occurring and trusting my own testing over solely trusting its own.
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+If I had a friend who had never used Stream lit, I would explain it to them by using an analogy for a light switch and electricity. You can have all the electricity in the world, but the light won't turn on without the switch. Well, we can have a long and well written code, but it wouldn't run unless we ran stream lit. Stream lit re-runs allow us to turn the light on and off without having to take our fingers off of the light switch.
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
-- What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+- What is one habit or strategy from this project that you want to reuse in future labs or projects? This could be a testing habit, a prompting strategy, or a way you used Git.
+I want to implement my mentality for bug testing into other projects. i strategically asked the AI for 1 bug fix at a time and after it suggested a fix, I ran the game and tested it manually. I utilized various scenarios and cases, trying to break the logic as much as I could, so i could take those edge cases and ask for specific fixes. I wish to be this meticulous in my testing in the future.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time, I plan to challenge myself to recommend lines of code, rather than just ask for what I want from the AI. For example, if I am having an error in output, I will write the code for the output manually and have the AI check it or suggest, rather than fix based on keywords only. I want to see AI as a partner and not a solution.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+The project helped me understand the role that AI can play in development. Although it can be fast and reliable at times, it cannot fully develop a bug-less experience. The role of the software engineer is evermore important because they can catch these bugs and correct them using their own knowledge, since there will be times where the AI will overlook something in its development. AI is not meant to develop, but to supplement a developer.
