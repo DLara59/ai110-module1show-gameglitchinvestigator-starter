@@ -1,4 +1,4 @@
-from logic_utils import check_guess, update_score
+from logic_utils import check_guess, get_range_for_difficulty, update_score
 
 
 def test_winning_guess():
@@ -16,6 +16,17 @@ def test_guess_too_low_regression():
     outcome, message = check_guess(40, 50)
     assert outcome == "Too Low"
     assert message == "📈 Go HIGHER!"
+
+
+def test_guess_boundary_feedback_regression():
+    assert check_guess(0, 1) == ("Too Low", "📈 Go HIGHER!")
+    assert check_guess(101, 100) == ("Too High", "📉 Go LOWER!")
+
+
+def test_difficulty_ranges_regression():
+    assert get_range_for_difficulty("Easy") == (1, 20)
+    assert get_range_for_difficulty("Normal") == (1, 100)
+    assert get_range_for_difficulty("Hard") == (1, 50)
 
 
 def test_update_score_tracks_points():

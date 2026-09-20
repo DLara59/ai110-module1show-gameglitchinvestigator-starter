@@ -61,6 +61,7 @@ def update_score(
     attempt_number: int,
     attempt_limit: int = 8,
 ):
+    #FIX Scale score changes by attempts so wins max at 100 and losses reach -100.
     """Update score based on outcome, attempt number, and attempt limit."""
     if outcome == "Win":
         reward = round(100 * (attempt_limit - attempt_number + 1) / attempt_limit)
