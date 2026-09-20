@@ -7,17 +7,18 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - What did the game look like the first time you ran it?
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
-
+  	The game looked pretty sound upon first glance, however, it was only after my first run of the game did I notice the issues. 
+  	The first bug I ran into was the incorrect hints when it came to guessing the solution of the game; I was told to guess higher when the solution ended up being lower than the guesses that I was making.
+  	The second bug that I ran into was the restart feature of the game once the game was complete not correctly restarting the game; instead, the page would appear to frozen.
+  	The third bug that I ran into was the hint asking you to go lower than one, despite the secret number being higher than 0; this resulted in an illogical ask from the system, since the parameters of the program are numbers between 1 and 100, and 0 is not in that range.
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
-
+| guess of 60 | Too low hint| Go HIGHER! hint shown | none |
+|press New Game | Start a new game | New game does not start | none |
+|guess of 0 | Go higher | Go LOWER! | none|
 ---
 
 ## 2. How did you use AI as a teammate?
