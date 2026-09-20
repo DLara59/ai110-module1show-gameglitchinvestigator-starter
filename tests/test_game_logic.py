@@ -19,14 +19,19 @@ def test_guess_too_low_regression():
 
 
 def test_update_score_tracks_points():
-    assert update_score(0, "Win", 1) == 80
-    assert update_score(10, "Too High", 2) == 15
-    assert update_score(10, "Too Low", 3) == 5
+    assert update_score(0, "Win", 1, 8) == 100
+    assert update_score(0, "Win", 2, 8) == 88
+    assert update_score(0, "Too High", 1, 8) == -12
+
+    score = 0
+    for attempt_number in range(1, 9):
+        score = update_score(score, "Too Low", attempt_number, 8)
+    assert score == -100
 
 
 def test_regression_game_flow_and_end_state():
     # Score must still track and increment on a win.
-    assert update_score(0, "Win", 1) == 80
+    assert update_score(0, "Win", 1, 8) == 100
 
     # The high/low feedback must be correct when the guess is on the wrong side.
     assert check_guess(60, 50) == ("Too High", "📉 Go LOWER!")
