@@ -44,11 +44,6 @@ if "history" not in st.session_state:
 
 st.subheader("Make a guess")
 
-st.info(
-    f"Guess a number between 1 and 100. "
-    f"Attempts left: {attempt_limit - st.session_state.attempts}"
-)
-
 raw_guess = st.text_input(
     "Enter your guess:",
     key=f"guess_input_{difficulty}"
@@ -118,6 +113,12 @@ if submit:
                 f"The secret was {st.session_state.secret}. "
                 f"Score: {st.session_state.score}"
             )
+
+#FIX Render attempts after submission so the count reflects the updated game state.
+st.info(
+    f"Guess a number between 1 and 100. "
+    f"Attempts left: {max(0, attempt_limit - st.session_state.attempts)}"
+)
 
 with st.expander("Developer Debug Info"):
     st.write("Secret:", st.session_state.secret)
