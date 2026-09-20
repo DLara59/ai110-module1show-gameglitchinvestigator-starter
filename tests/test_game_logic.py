@@ -19,11 +19,13 @@ def test_guess_too_low_regression():
 
 
 def test_guess_boundary_feedback_regression():
+    #FIX Preserve logical higher/lower hints at the valid range boundaries.
     assert check_guess(0, 1) == ("Too Low", "📈 Go HIGHER!")
     assert check_guess(101, 100) == ("Too High", "📉 Go LOWER!")
 
 
 def test_difficulty_ranges_regression():
+    #FIX Keep each difficulty's configured range aligned with the game rules.
     assert get_range_for_difficulty("Easy") == (1, 20)
     assert get_range_for_difficulty("Normal") == (1, 100)
     assert get_range_for_difficulty("Hard") == (1, 50)
